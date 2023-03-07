@@ -23,5 +23,5 @@ Once the setup is completed (3-7 mins depending on how sprightly your cluster is
 
 # Deleting the cluster
 ```
-k3d cluster delete workflows-ci
+k3d cluster delete large-workflows
 ```
