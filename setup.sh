@@ -21,5 +21,6 @@ kubectl -n argocd apply -f bootstrap/app-of-apps
 sleep 30
 kubectl -n argo rollout status deployment/workflow-controller
 kubectl -n argo rollout status deployment/argo-server
-
+kubectl -n argo-events rollout status deployment/controller-manager
+kubectl -n argo-events rollout status deployment/events-webhook
 echo "Complete."
