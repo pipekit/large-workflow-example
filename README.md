@@ -14,14 +14,14 @@ The summary is "probably don't". If you really want to run on a remote cluster, 
 
 You will need to remove the k3d cluster creation step from the script.
 
-## Steps to Run
+# Steps to Run
+Creating the cluster and bootstrapping it is done with one simple script:
 ```
 chmod +x setup.sh
 ./setup.sh
 ```
 
-
-# Deleting the cluster
+## Deleting the cluster
 ```
 k3d cluster delete large-workflows
 ```
@@ -31,3 +31,12 @@ k3d cluster delete large-workflows
 |----------------|------------------------------|------------|------------------------|
 | Argo Workflows | https://localhost:30000      | -          | -                      |
 | Minio UI       | http://localhost:30002       | `pipekit`  | `sup3rs3cr3tp4ssw0rd1` |
+
+# Behind the scenes
+
+Minio has been set up with two buckets, `pipekit` and `workflows`. Argo Workflows is configured to use `workflows` as the bucket to store artifacts in (including logs). The `pipekit` bucket is connected to the Argo Events Minio Eventsource. This means that any file that is uploaded to the `pipekit` bucket will trigger an Argo Event.
+
+You can log into the Minio UI (see details above) to upload something via your browser, or use our pre-canned script to upload a file:
+```
+todo
+```
