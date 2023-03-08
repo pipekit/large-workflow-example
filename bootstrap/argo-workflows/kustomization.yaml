@@ -3,7 +3,8 @@ kind: Kustomization
 
 resources:
 - https://github.com/argoproj/argo-workflows/releases/download/v3.4.5/install.yaml
-- rolebinding.yml
+- rolebinding.yaml
+- minio-secret.yaml
 
 patches:
 - path: workflow-controller-configmap.yaml

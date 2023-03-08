@@ -4,16 +4,6 @@ kind: ConfigMap
 metadata:
   name: workflow-controller-configmap
 data:  
-  executor: |
-    imagePullPolicy: Always
-    resources:
-      requests:
-        cpu: 100m
-        memory: 64Mi
-      limits:
-        cpu: 500m
-        memory: 512Mi
-
   # Default values that will apply to all Workflows from this controller, unless overridden on the Workflow-level
   # See more: docs/default-workflow-specs.md
   workflowDefaults: |
@@ -30,3 +20,15 @@ data:
         limit: 3
       serviceAccountName: argo
 
+  artifactRepository: |
+    archiveLogs: true
+    s3:
+      bucket: workflows
+      endpoint: minio.minio.svc.cluster.local:9000
+      insecure: true
+      accessKeySecret:
+        name: minio-creds
+        key: accesskey
+      secretKeySecret:
+        name: minio-creds
+        key: secretkey
