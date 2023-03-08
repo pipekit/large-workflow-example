@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
 - github.com/argoproj/argo-workflows/manifests/cluster-install?ref=v3.4.5
 - rolebinding.yml
-- ingress.yaml
 
 patches:
 - path: workflow-controller-configmap.yaml

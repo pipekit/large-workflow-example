@@ -23,7 +23,6 @@ kubectl -n argo rollout status deployment/workflow-controller
 kubectl -n argo rollout status deployment/argo-server
 kubectl -n argo-events rollout status deployment/controller-manager
 kubectl -n argo-events rollout status deployment/events-webhook
-kubectl -n ingress-nginx rollout status deployment/nginx-ingress-nginx-controller
 kubectl -n minio rollout status deployment/minio
 
 echo "Complete."

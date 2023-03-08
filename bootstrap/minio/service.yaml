@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/component: minio
   name: minio
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
   - name: http
     port: 9000
