@@ -4,3 +4,5 @@ namespace: argo-events
 resources:
   - github.com/argoproj/argo-events/manifests/cluster-install?ref=v1.7.6
   - github.com/argoproj/argo-events/manifests/extensions/validating-webhook?ref=v1.7.6
+  - minio-secret.yaml
+  - minio-eventsource.yaml
