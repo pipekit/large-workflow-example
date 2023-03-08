@@ -100,5 +100,5 @@ data:
     scheme=http
     connectToMinio $scheme
     # Create the buckets
-    createBucket pipekit public false true
+    createBucket pipekit public false false
     createBucket workflows public false true
