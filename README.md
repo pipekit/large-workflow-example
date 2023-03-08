@@ -27,7 +27,8 @@ k3d cluster delete large-workflows
 ```
 
 # Opening things in your browser
-
-Workflows: https://localhost:30000
-Minio API: https://localhost:30001
-Minio UI: https://localhost:30002 - Username: `pipekit`. Password: `sup3rs3cr3tp4ssw0rd1`
+| Name           | URL                          | username   | password               |
+|----------------|------------------------------|------------|------------------------|
+| Argo Workflows | https://localhost:30000      | -          |                        |
+| Minio API      | https://localhost:30001      | `pipekit`  | `sup3rs3cr3tp4ssw0rd1` |
+| Mini UI        | https://localhost:30002      | `pipekit`  | `sup3rs3cr3tp4ssw0rd1` |
