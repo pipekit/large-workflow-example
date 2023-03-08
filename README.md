@@ -25,3 +25,9 @@ chmod +x setup.sh
 ```
 k3d cluster delete large-workflows
 ```
+
+# Opening things in your browser
+
+Workflows: https://localhost:30000
+Minio API: https://localhost:30001
+Minio UI: https://localhost:30002

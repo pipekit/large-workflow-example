@@ -14,3 +14,7 @@ patches:
   target:
     kind: Deployment
     name: argo-server
+- path: patch-service.yaml
+  target:
+    kind: Service
+    name: argo-server
