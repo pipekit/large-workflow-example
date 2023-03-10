@@ -13,9 +13,7 @@
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/install.yaml\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
-  ],
-  "regexManagers": [
+    },
     {
       "fileMatch": ["README.md$"],
       "matchStrings": [
