@@ -23,5 +23,14 @@
       "depNameTemplate": "argoproj/argo-workflows",
       "datasourceTemplate": "github-releases"
     },
+    {
+      "fileMatch": ["README.md$"],
+      "matchStrings": [
+        "| Argo CD        | (?<currentValue>.*)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "argoproj/argo-cd",
+      "datasourceTemplate": "github-releases"
+    }
   ]
 }
