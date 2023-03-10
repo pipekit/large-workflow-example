@@ -40,12 +40,3 @@ You can log into the Minio UI (see details above) to upload something via your b
 ```
 todo
 ```
-
-# Software Versions
-
-| Version | Name           |
-|---------|----------------|
-| v1.2.3  | Argo Workflows | 
-| v1.2.3  | Argo CD        |
-| v1.2.3  | Argo Events    |
-| v1.2.3  | Minio          |

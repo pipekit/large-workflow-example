@@ -13,24 +13,6 @@
         "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*https:\/\/github.com\/argoproj\/argo-workflows\/releases\/download\/(?<currentValue>.*)\/install.yaml\\s"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    },
-    {
-      "fileMatch": ["README.md$"],
-      "matchStrings": [
-        "\\|\\s+(?<currentValue>.*)\\s+\\|\\s+Argo Workflows"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
-      "depNameTemplate": "argoproj/argo-workflows",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "fileMatch": ["README.md$"],
-      "matchStrings": [
-        "\\|\\s+(?<currentValue>.*)\\s+\\|\\s+Argo CD"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
-      "depNameTemplate": "argoproj/argo-cd",
-      "datasourceTemplate": "github-releases"
     }
   ]
 }
