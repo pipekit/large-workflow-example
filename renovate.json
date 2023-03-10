@@ -17,9 +17,11 @@
     {
       "fileMatch": ["README.md$"],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s.*_VERSION = (?<currentValue>)"
+        "| Argo Workflows | (?<currentValue>.*)"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "depNameTemplate": "argoproj/argo-workflows",
+      "datasourceTemplate": "github-releases"
+    },
   ]
 }
