@@ -48,4 +48,5 @@ todo
 |----------------|------------------------------|
 | Argo Workflows | v2.12.6                      |
 | Argo CD        | v2.12.6                      |
-| Minio UI       | 1.2.3                        |
+| Argo Events    | v2.12.6                      |
+| Minio          | 1.2.3                        |

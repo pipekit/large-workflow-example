@@ -17,7 +17,7 @@
     {
       "fileMatch": ["README.md$"],
       "matchStrings": [
-        "| Argo Workflows | (?<currentValue>.*)"
+        "\\|\\s+Argo Workflows\\s+\\|\\s(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "depNameTemplate": "argoproj/argo-workflows",
@@ -26,7 +26,7 @@
     {
       "fileMatch": ["README.md$"],
       "matchStrings": [
-        "| Argo CD        | (?<currentValue>.*)"
+        "\\|\\s+Argo CD\\s+\\|\\s(?<currentValue>.*)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
       "depNameTemplate": "argoproj/argo-cd",
