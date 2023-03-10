@@ -43,10 +43,9 @@ todo
 
 # Software Versions
 
-
-| Name           | Version                      |
-|----------------|------------------------------|
-| Argo Workflows | v2.12.6                      |
-| Argo CD        | v2.12.6                      |
-| Argo Events    | v2.12.6                      |
-| Minio          | 1.2.3                        |
+| Version | Name           |
+|---------|----------------|
+| v1.2.3  | Argo Workflows | 
+| v1.2.3  | Argo CD        |
+| v1.2.3  | Argo Events    |
+| v1.2.3  | Minio          |
