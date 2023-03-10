@@ -45,4 +45,4 @@ todo
 <!---
 # https://github.com/argoproj/argo-workflows/
 # renovate: datasource=github-releases depName=argoproj/argo-workflows -->
-ARGO_WORKFLOWS_VERSION=v2.12.6
+ARGO_WORKFLOWS_VERSION = v2.12.6

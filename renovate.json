@@ -17,7 +17,7 @@
     {
       "fileMatch": ["README.md$"],
       "matchStrings": [
-        ".*_VERSION=(?<currentValue>.*)"
+        ".*_VERSION = (?<currentValue>)"
       ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
