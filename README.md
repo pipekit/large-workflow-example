@@ -40,3 +40,9 @@ You can log into the Minio UI (see details above) to upload something via your b
 ```
 todo
 ```
+
+# Software Versions
+<!---
+# https://github.com/argoproj/argo-workflows/
+# renovate: datasource=github-releases depName=argoproj/argo-workflows -->
+ARGO_WORKFLOWS_VERSION=v2.12.6
