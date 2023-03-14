@@ -10,7 +10,6 @@ spec:
   selector:
     matchLabels:
       app: minio
-  serviceName: minio
   template:
     metadata:
       labels:
@@ -42,5 +41,3 @@ spec:
             memory: 512Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-  updateStrategy:
-    type: RollingUpdate
