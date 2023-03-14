@@ -45,3 +45,5 @@ You can log into the Minio UI (see details above) to upload something via your b
 ```
 todo
 ```
+
+Postgres contains two databases; `workflow` for log archiving of argo workflows and `pipekit` for our application.
