@@ -32,3 +32,34 @@ data:
       secretKeySecret:
         name: minio-creds
         key: secretkey
+
+  persistence: |
+    connectionPool:
+      maxIdleConns: 50
+      maxOpenConns: 20
+      connMaxLifetime: 14400s # 0 means connections don't have a max lifetime
+    #  if true node status is only saved to the persistence DB to avoid the 1MB limit in etcd
+    nodeStatusOffLoad: false
+    # save completed workloads to the workflow archive
+    archive: true
+    # the number of days to keep archived workflows (the default is forever)
+    archiveTTL: 1d
+    # skip database migration if needed.
+    skipMigration: false
+
+    postgresql:
+      host: postgres.postgres.svc.cluster.local
+      port: 5432
+      database: workflows
+      tableName: argo_workflows
+      # the database secrets must be in the same namespace of the controller
+      userNameSecret:
+        name: argo-postgres-config
+        key: username
+      passwordSecret:
+        name: argo-postgres-config
+        key: password
+      ssl: false
+      # sslMode must be one of: disable, require, verify-ca, verify-full
+      # you can find more information about those ssl options here: https://godoc.org/github.com/lib/pq
+      sslMode: disable

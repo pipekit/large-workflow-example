@@ -7,6 +7,7 @@ resources:
 - https://github.com/argoproj/argo-workflows/releases/download/v3.4.5/install.yaml
 - rolebinding.yaml
 - minio-secret.yaml
+- pgsql-secret.yaml
 
 patches:
 - path: workflow-controller-configmap.yaml

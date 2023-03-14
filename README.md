@@ -32,6 +32,11 @@ k3d cluster delete large-workflows
 | Argo Workflows | https://localhost:30000      | -          | -                      |
 | Minio UI       | http://localhost:30002       | `pipekit`  | `sup3rs3cr3tp4ssw0rd1` |
 
+# Connecting to the Postgres DB
+| Name           | URL                          | username   | password               |
+|----------------|------------------------------|------------|------------------------|
+| Postgres       | localhost:30003              | `postgres` | `sup3rs3cr3tp4ssw0rd1` |
+
 # Behind the scenes
 
 Minio has been set up with two buckets, `pipekit` and `workflows`. Argo Workflows is configured to use `workflows` as the bucket to store artifacts in (including logs). The `pipekit` bucket is connected to the Argo Events Minio Eventsource. This means that any file that is uploaded to the `pipekit` bucket will trigger an Argo Event.
