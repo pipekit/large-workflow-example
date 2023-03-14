@@ -20,6 +20,7 @@ kubectl -n argocd apply -f bootstrap/app-of-apps
 
 # Wait for Argo CD to start syncing its new-found applications
 sleep 30
+kubectl -n postgres rollout status deployment/postgres
 kubectl -n argo rollout status deployment/workflow-controller
 kubectl -n argo rollout status deployment/argo-server
 kubectl -n argo-events rollout status deployment/controller-manager
