@@ -29,7 +29,7 @@ spec:
           value: postgres
         - name: POSTGRES_PASSWORD
           value: sup3rs3cr3tp4ssw0rd1
-        image: postgres:15.2
+        image: postgres:15.3
         name: postgres
         ports:
         - containerPort: 5432
